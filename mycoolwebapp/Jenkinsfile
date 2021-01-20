@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage('Build application'){
+            steps{
+                sh 'mvn -f mycoolwebapp/pom.xml clean package'
+            }
+            post{
+                success{
+                    archiveArtifacts artifacts : "**/*.war"
+                }
+            }
+        }
+    }
+}
