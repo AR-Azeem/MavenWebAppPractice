@@ -13,7 +13,9 @@ pipeline{
             }
         }
         stage('Deploy'){
-            echo 'Deploying in staging area'
+            steps{
+                echo 'Deploying in staging area'
+            }
         }
     }
 }
