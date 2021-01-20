@@ -1,7 +1,7 @@
 job('Maven DSL project'){
     description("first maven project for DSl script")
     scm {
-        git("https://github.com/AR-Azeem/MavenPrac.git",master)
+        git("https://github.com/AR-Azeem/MavenPrac.git",'master')
     }
     triggers{
         scm('* * * * *')
